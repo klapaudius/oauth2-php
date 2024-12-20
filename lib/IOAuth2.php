@@ -125,7 +125,7 @@ interface IOAuth2
      *
      * @ingroup  oauth2_section_4
      */
-    public function finishClientAuthorization($isAuthorized, $data = null, Request $request = null, $scope = null);
+    public function finishClientAuthorization($isAuthorized, $data = null, ?Request $request = null, $scope = null);
 
     /**
      * Handle the creation of access token, also issue refresh token if support.

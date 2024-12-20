@@ -1126,7 +1126,7 @@ class OAuth2 implements IOAuth2
     /**
      * {@inheritdoc}
      */
-    public function finishClientAuthorization($isAuthorized, $data = null, Request $request = null, $scope = null)
+    public function finishClientAuthorization($isAuthorized, $data = null, ?Request $request = null, $scope = null)
     {
         // In theory, this could be POSTed by a 3rd-party (because we are not
         // internally enforcing NONCEs, etc)
