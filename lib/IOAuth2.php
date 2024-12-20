@@ -85,7 +85,7 @@ interface IOAuth2
      * @see  http://tools.ietf.org/html/draft-ietf-oauth-v2-bearer-08#section-2.3
      *
      */
-    public function getBearerToken(Request $request = null, $removeFromRequest = false);
+    public function getBearerToken(?Request $request = null, $removeFromRequest = false);
 
     /**
      * Grant or deny a requested access token.
@@ -105,7 +105,7 @@ interface IOAuth2
      *
      * @ingroup  oauth2_section_4
      */
-    public function grantAccessToken(Request $request = null);
+    public function grantAccessToken(?Request $request = null);
 
     /**
      * Redirect the user appropriately after approval.

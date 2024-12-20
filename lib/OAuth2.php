@@ -488,7 +488,7 @@ class OAuth2 implements IOAuth2
     /**
      * {@inheritdoc}
      */
-    public function getBearerToken(Request $request = null, $removeFromRequest = false)
+    public function getBearerToken(?Request $request = null, $removeFromRequest = false)
     {
         if ($request === null) {
             $request = Request::createFromGlobals();
@@ -681,7 +681,7 @@ class OAuth2 implements IOAuth2
     /**
      * {@inheritdoc}
      */
-    public function grantAccessToken(Request $request = null)
+    public function grantAccessToken(?Request $request = null)
     {
         $filters = array(
             "grant_type" => array(
@@ -1014,7 +1014,7 @@ class OAuth2 implements IOAuth2
      *
      * @ingroup oauth2_section_3
      */
-    protected function getAuthorizeParams(Request $request = null)
+    protected function getAuthorizeParams(?Request $request = null)
     {
         $filters = array(
             "client_id" => array(
